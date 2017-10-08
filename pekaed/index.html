@@ -1,12 +1,85 @@
 <html>
 <head>
+	<style>
+		body {
+			font-family: Arial;
+		}
+		
+		.linkBox {
+			background-color: #dddddd;
+			border: 1px #b7b7b7 solid;
+			height: auto;
+			width: 300px;
+		}
+		
+		.header {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height:80px;
+			background-color: #FF050A;
+			text-align: center;
+			font-size: 40px;
+			border-bottom: 1px black solid;
+			padding-top: 30px;
+		}
+		
+		.main {
+			margin: auto;
+			width: 900px;
+			height: auto;
+			min-height: 700px;
+			border-left: 1px #d6d6d6 solid;
+			border-right: 1px #d6d6d6 solid;
+			border-bottom: 1px #d6d6d6 solid;
+			background-color: #efefef;
+			margin-top: 80px;
+			padding: 10px;
+		}
+		
+		.footer {
+			font-size:12px;
+			margin: auto;
+			width: 900px;
+			text-align: center;
+		}
+	</style>
 	<title>PekaED - Pekka Kana 2 Level Editor</title>
 </head>
 <body>
-<h2 style="font-family: Arial;">PekaED</h2>
-<hr />
-Features:<br />
-Screenshots:<br />
-<a href="#">Manual</a><br />
+	<div class="header">
+		Pekka Kana 2 Level Editor
+	</div>
+	<br />
+	<div class="main">
+		<div class="linkBox">
+			<ol>
+				<li>Introduction</li>
+					<ol>
+						<li>Foreword</li>
+						<li>Screenshots</li>
+						<li>Interface explained</li>
+							<ol>
+								<li>The Toolbar</li>
+								<li>Tiles panel</li>
+								<li>Level panel</li>
+								<li>"Tabbed" panel (change this)</li>
+							</ol>
+					</ol>
+				<li>Creating a new level</li>
+				<li>Creating a new episode</li>
+				<ol>
+					<li>Importing existing levels</li>
+				</ol>
+				<li>Importing an existing episode</li>
+				<li>Changing the levels properties</li>
+				<li>Adding sprites</li>
+			</ol>
+		</div>
+	</div>
+	<div class="footer">
+		Found a bug? Submit it <a href="https://github.com/Detea/PekaED/issues">here!</a>
+	</div>
 </body>
 </html>
