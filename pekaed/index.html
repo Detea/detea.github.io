@@ -2,7 +2,8 @@
 <head>
 	<style>
 		body {
-			font-family: Arial;
+			font-family: Verdana;
+			font-size: 14px;
 		}
 		
 		.linkBox {
@@ -10,6 +11,12 @@
 			border: 1px #b7b7b7 solid;
 			height: auto;
 			width: 300px;
+			float: left;
+			margin-right: 10px;
+		}
+		
+		table {
+			font-size: 14px;
 		}
 		
 		.header {
@@ -18,11 +25,13 @@
 			left: 0;
 			width: 100%;
 			height:80px;
-			background-color: #FF050A;
+			background-color: #f72718;
 			text-align: center;
 			font-size: 40px;
+			font-weight: 550;
 			border-bottom: 1px black solid;
 			padding-top: 30px;
+			letter-spacing: 8px;
 		}
 		
 		.main {
@@ -36,6 +45,7 @@
 			background-color: #efefef;
 			margin-top: 80px;
 			padding: 10px;
+			font-size: 14px;
 		}
 		
 		.footer {
@@ -43,6 +53,42 @@
 			margin: auto;
 			width: 900px;
 			text-align: center;
+		}
+		
+		h2 {
+			margin-bottom: 0;
+			font-weight: normal;
+		}
+		
+		hr {
+			background-color: black;
+			margin-top: 0;
+		}
+		
+		p {
+			margin-top: 5px;
+			display: block;
+			height: auto;
+		}
+		
+		a {
+			text-decoration: none;
+		}
+		
+		a:visited {
+			color: blue;
+		}
+		
+		.seeLink {
+			font-size: 12px;
+		}
+		
+		img {
+			border: 1px black solid;
+			margin-left:auto;
+			margin-right:auto;
+			margin-top:5px;
+			display:block;
 		}
 	</style>
 	<title>PekaED - Pekka Kana 2 Level Editor</title>
@@ -53,30 +99,237 @@
 	</div>
 	<br />
 	<div class="main">
-		<div class="linkBox">
+		<br />
+		<h2>Table of contents</h2><hr />
+		<p style="display: inline-block;">
+			<div class="linkBox">
 			<ol>
-				<li>Introduction</li>
+				<li><a href="#Screenshot">Screenshot</a></li>
+				<li><a href="#Toolbar">Toolbar</a></li>
+				<li><a href="#Tiles-Panel">Tiles Panel</a></li>
+				<li><a href="#Level-Panel">Level Panel</a></li>
+				<li><a href="#Properties-Panel">Properties Panel</a></li>
+				<li><a href="#Sprites-Panel">Sprites Panel</a></li>
+				<li><a href="#Episode-Panel">Episode Panel</a></li>
+				<li><a href="#Settings-Dialog">Settings Dialog</a></li>
+				<li><a href="#Tools">Tools</a></li>
+				<li><a href="#Layers">Layers</a></li>
+				<li><a href="#Modes">Modes</a></li>
+				<li><u>FAQ</u></li>
 					<ol>
-						<li>Foreword</li>
-						<li>Screenshots</li>
-						<li>Interface explained</li>
-							<ol>
-								<li>The Toolbar</li>
-								<li>Tiles panel</li>
-								<li>Level panel</li>
-								<li>"Tabbed" panel (change this)</li>
-							</ol>
+						<li><a href="#">Does the editor support custom content?</a></li>
+						<li><a href="#">"Tileset/Background not found"</a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
 					</ol>
-				<li>Creating a new level</li>
-				<li>Creating a new episode</li>
-				<ol>
-					<li>Importing existing levels</li>
-				</ol>
-				<li>Importing an existing episode</li>
-				<li>Changing the levels properties</li>
-				<li>Adding sprites</li>
 			</ol>
 		</div>
+			This editor was created, because the official editor for Pekka Kana 2 doesn't run well on modern operating systems
+			and the interface is not great either.<br /><br />
+			
+			The aim of this editor is to have it run on modern operating systems and make it as easy as possible to make levels for Pekka Kana 2.
+			It is supposed to get out of your way, while creating levels. Have everything important displayed cleary and be as convenient as possible.
+			The user interface is designed with the user in mind.
+			so that you can quickly read, or even just skim, through the manual for the most important information and get working on your custom content.<br />
+			<br />
+			There is no getting started guide, because it simple isn't necessary!<br /> Just go to <i>File -> New Level</i>, that's it. You can start working on your level.<br />
+			Don't forget to place a "start" and an "exit" tile!
+			<br /><br />
+			<br /><br />
+			<br /><br />
+		</p><br />
+		<a name="Screenshot"><h2>Screenshot</h2></a><hr />
+		<p>
+			Here is a screenshot of the editor in action (click to open a bigger image):
+			<a href="editorBig.png"><img style="width: 800px;" alt="Screenshot of editor" src="editorBig.png"></a>
+		</p><br />
+		<a name="Toolbar"><h2>Toolbar</h2></a><hr />
+		<p>
+			<br />
+			<img alt="Screen of toolbar, with numbers" src="toolbar.png"><br />
+			<table style="border:0;font-size: 14px;">
+			<tr>
+				<td><b>Figure 1:</b> Create a new empty level.</td><td><i>Shortcut: CTRL + N</i></td>
+			</tr>
+			<tr>
+				<td><b>Figure 2:</b> Open an existing level.</td><td><i>Shortcut: CTRL + O</i></td>
+			</tr>
+			<tr>
+				<td><b>Figure 3:</b> Save the currently opened level.</td><td><i>Shortcut: CTRL + S</i></td>
+			</tr>
+			<tr>
+				<td><b>Figure 4:</b> Save the currently opened level as...</td><td><i>Shortcut: CTRL + Shift + S</i></td>
+			</tr>
+			<tr>
+				<td><b>Figure 5:</b> Select the brush tool. <span class="seeLink">(See: <a href="#Tools">Tools</a>)</td><td><i>Shortcut: E</i></td>
+			</tr>
+			<tr>
+				<td><b>Figure 6:</b> Select the eraser tool. <span class="seeLink">(See: <a href="#Tools">Tools</a>)</td><td><i>Shortcut: R</i></td>
+			</tr>
+			<tr>
+				<td><b>Figure 7:</b> Show or hide the sprites.</td><td><i>Shortcut: S</i></td>
+			</tr>
+			<tr>
+				<td><b>Figure 8:</b> Select the current layer. <span class="seeLink">(See: <a href="#Layers">Layers</a>)</span></td><td><i>Shortcut: 1 - Both</i></td>
+			</tr>
+			<tr>
+				<td></td><td><i>Shortcut: 2 - Foreground</i></td>
+			</tr>
+			<tr>
+				<td></td><td><i>Shortcut: 3 - Background</i></td>
+			</tr>
+			<tr>
+				<td><b>Figure 9:</b> Select the current mode. <span class="seeLink">(See: <a href="#Modes">Modes</a>)</span></td><td><i>None</i></td>
+			</tr>
+			</table>
+		</p><br />
+		<a name="Tiles-Panel"><h2>Tiles Panel</h2></a><hr />
+		<p style="display:inline-block">
+			<img src="tilePanel.png" style="float:right;margin-right:10px;">This panel shows the tileset of the currently loaded level.<br />
+			<br />
+			You can choose a tile by clicking on it, or you can choose multiple tiles at once, by pressing a mouse button and then dragging to the right and/or down.<br /><br />
+			The selected tile/s is/are marked by the black and white square that's surrounding it/them.<br /><br />
+			To change the tileset of the level navigate to the the <a href="#Properties-Panel">Properties Panel</a><br /><br /><br />
+			The tiles have the following functions:<br /><br />
+			<b>Note:</b> The following list is taken from the manual of the official editor by Pistegamez. <a href="http://www.pistegamez.net/PK2/editor/editor_manual.htm">Original</a>
+			<br /><br />
+			<b>Tiles 1-40:</b><br />
+			Normal wall tiles.<br />
+			<br />
+			<b>Tiles 41-50:</b><br />
+			Special wall tiles.<br />
+			41: Special floor that is not displayed in the game.<br />
+			Player or any other sprite can't fall through it. <br />
+			42: Horizontal elevator.<br />
+			43: Vertical elevator.<br />
+			44: Trap wall (moves up when blue switch is pressed<br />
+			45: Trap wall (moves right when green switch is pressed)<br />
+			46: Trap wall (moves down when blue switch is pressed<br />
+			47: Trap wall (moves left when green switch is pressed)<br />
+			48: Lock wall. Lock wall vanishes when a key touches it.<br />
+			All lock walls in a map will disappear if player collects all the keys. <br />
+			49: Skull Switch Wall (foreground). If player hits a Skull Switch sprite,<br />
+			this wall will disappear. <br />
+			50: Skull Switch Wall (background). If player hits a Skull Switch sprite<br />
+			a Skull Switch Wall (foreground) will appear in the foreground layer if this<br />
+			wall is in the background layer.<br />
+			<br />
+			<b>Tiles 51-60:</b><br />
+			Hill tiles.<br />
+			<br />
+			<b>Tiles 61-80:</b><br />
+			Animated tiles. All these tiles work as walls, but tiles 61, 66, 71, and 76 are animated using the rest of the animated tiles.<br />
+			<br />
+			<b>Tiles 81-130:</b><br />
+			Normal background tiles.<br />
+			<br />
+			<b>Tiles 131-140:</b><br />
+			Water tiles. All these tiles work as backgrounds. They work as water only<br />
+			if drawn to background layer.<br />
+			<br />
+			<b>Tiles 141-150:</b><br /> 
+			Special tiles<br />
+			141: Wind to the left. Draw in foreground layer.<br /> 
+			142: Wind to the right Draw in foreground layer. <br />
+			143: Smoke tile<br />
+			144: Hideout tile (some sprites duck behind this tile)<br />
+			145: Fire tile (goes out when orange switch is pressed)<br />
+			146: Orange switch. Draw in foreground layer. <br />
+			147: Blue switch. Draw in foreground layer. <br />
+			148: Green switch. Draw in foreground layer. <br />
+			149: Start tile. <b>Every map needs at least one.</b> Draw in foreground layer. <br />
+			150: Exit tile. <b>Every map needs at least one.</b> Draw in foreground layer. <br />
+		</p><br />
+		<a name="Level-Panel"><h2>Level Panel</h2></a><hr />
+		<p>
+			The Level Panel is the big one in the middle of the editor, where the background, the tiles and the sprites of the level are drawn.
+			It will also show your currently selected tile/s or sprite.<br /><br />
+			Depending on your selected tool you can add, erase and select, one or multiple, tiles from/to the level. <span class="seeLink">(See <a href="#Tools">Tools</a>)</span><br /><br />
+			To add a tile to the level, navigate to the <a href="#Tiles-Panel">Tiles Panel</a>, select the tile/s you want and simply press, or drag, the left mouse button on the level panel.<br /><br />
+			To add a sprite, navigate to the <a href="#Sprites-Panel">Sprites Panel</a>, add or select a sprite and press, or drag, on the level panel.<br />
+			To remove a sprite from the level, simply press or drag on the level panel.<br />
+		</p><br />
+		<a name="Properties-Panel"><h2>Properties Panel</h2></a><hr />
+		<p style="display:inline-block">
+			<img src="propertiesPanel.png" style="float:left;margin-right:10px;">In this panel you can change the properties of your level.<br /><br />
+			<table border="0">
+				<tr><td>Name:</td><td>The name of your level, that is going to be displayed in the game.</td></tr>
+				<tr><td>Creator:</td><td>Your name, the creator of the level.</td></tr>
+				<tr><td>Tileset:</td><td>The tileset of the level. You can change it by pressing the "Select" button.</td></tr>
+				<tr><td>Background:</td><td>The Background of the level. You can change that by pressing the "Select" button, too.</td></tr>
+				<tr><td>Music:</td><td>The soundtrack that is going to be played, while playing the level. Change it by pressing "Select".</td></tr>
+				<tr><td>Level nr.</td><td>The number of this level in your episode.</td></tr>
+				<tr><td>Time (sec):</td><td>The time limit of the level, in seconds. Set to zero if you don't want to have one.</td></tr>
+				<tr><td>Scrolling:</td><td>The way the level will scroll in game. (Horizontally, Vertically or both)</td></tr>
+				<tr><td>Special:</td><td>The weather effects of the level. Normal means none.</td></tr>
+				<tr><td>Icon:</td><td>The icon of your level, on the map where you choose the next level to play.</td></tr>
+				<tr><td>Position:</td><td>Set the position of your level on the level select map.</td></tr>
+			</table>
+		</p><br />
+		<a name="Sprites-Panel"><h2>Sprites Panel</h2></a><hr />
+		<p style="display:inline-block">
+			<img src="spritePanel.png" style="float:right;margin-right:10px;"> In the sprites panel you can add and remove sprites from/to the level.<br />
+			Pressing the "Set Player" button does that. It sets the selected sprite to the player of the level.<br />
+			To know which sprite is the player, simply look at the list. The sprite where "Player?:" is set to "true" is the playable character.
+			<br /><br />
+			The shortcut too add a sprite is: <i>CTRL + A</i>
+		<p><br />
+		<a name="Episode-Panel"><h2>Episode Panel</h2></a><hr />
+		<p style="display:inline-block">
+			<img src="episodePanel.png" style="float:left;margin-right:10px;"> The episode panel will list all the files an episode, that you can create or load.<br /><br />
+			The name of the currently loaded episode will appear next to the "Episode:" label.<br />
+			All the files that belong to the episode will be displayed in the list, in the middle of the panel.<br />
+			Level are ordered by level number, in ascending order. (1 to X).<br />
+			The "Remove" button removes the level from the episode. When removing an episode you are asked if you also want to delete the file from your disk.
+			<br />
+			<br />
+			In legacy mode you can add up to 50 levels to your episode, in enhanced you can decide, but are still limited by the version of your game. <span class="seeLink">(See: <a href="#Modes">Modes</a>)</span><br />
+		</p><br />
+		<a name="Settings-Dialog"><h2>Settings Dialog</h2></a><hr />
+		<p>
+			<img src="settingsDialog.png"><br />
+			The Settings dialog is accessible via the <i>Extras -> Settings</i> menu.<br />
+			<br />
+			Path to Pekka Kana 2 is exactly that. It is the path to your installation of Pekka Kana 2.<br />
+			This is needed to find the games tilesets, backgrounds, music, etc. Click the "Browse" button to change it.<br />
+			<br />
+			In the "On start" section you can choose what the editor should do after it was executed.<br />
+			"Load last episode" loads the last episode that you've worked on.<br />
+			"Create empty level" creates an empty level, with the default setings. (Tileset, background, music, etc.)<br /><br />
+			"Level limit per episode" limits the amount of levels you can add to your episode. <span class="seeLink">(See: <a href="#Modes">Modes</a>)</span>
+		</p><br />
+		<a name="Tools"><h2>Tools</h2></a><hr />
+		<p>
+			Currently there are two tools available:<br /><br />
+			<b>Brush:</b><br />
+			If you have selected one or multiple tile/s from the <a href="#Tiles-Panel">Tiles Panel</a> you can add them to your level, by pressing the left mouse button, or holding it down and dragging your mouse.<br />
+			By pressing the right mouse button once you select the tile that's laying under the mouse cursor.<br />
+			By holding the right mouse button and dragging it down and/or to the right you can select multiple tiles from the level.<br />
+			<br />
+			<b>Eraser:</b><br />
+			Press any mouse button to delete the underlaying tile from the level.<br />
+		</p><br />
+		<a name="Layers"><h2>Layers</h2></a><hr />
+		<p>
+			There are 2 layers to choose from, as well as the option to select both.<br /><br />
+			<table border="0">
+			<tr><td>Both:</td><td>This will place the currently selected tile/s on both layers.</td></tr>
+			<tr><td>Foreground:</td><td>This will place the currently selected tile/s only on the foreground.</td></tr>
+			<tr><td>Background:</td><td>This will place the currently selected tile/s only on the background.</td></tr>
+			</table>
+			<br />
+			<b>Note:</b> If you select one or multiple tile/s from the layer "both" it will select the tile from the foreground AND the background.
+		</p><br />
+		<a name="Modes"><h2>Modes</h2></a><hr />
+		<p>
+			There are two modes available. These determine the limit for the amount of levels you can add to an episode.<br />
+			<br />
+			<table border="0">
+				<tr><td>Legacy:</td><td>In this mode you can add up to 50 levels to an episode. This is a limitation of Pekka Kana 2.</td></tr>
+				<tr><td>Enhanced:</td><td>In the enhanced mode you can set the limit yourself. It defaults to 100.</td></tr>
+				<tr><td></td><td><b>Note:</b> You have so set the limit to something that you version of the game can support. You can't use a higher limit than that, that's allowed in your version of Pekka Kana 2.</td></tr>
+			</table>
+		</p>
 	</div>
 	<div class="footer">
 		Found a bug? Submit it <a href="https://github.com/Detea/PekaED/issues">here!</a>
