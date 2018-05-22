@@ -1,0 +1,610 @@
+<html>
+	<head>
+		<title>PekaSE Manual</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<div class="header">
+			Pekka Kana 2 Sprite Editor
+		</div>
+		<br />
+		<div class="main">
+			<h2>Table of contents</h2><hr /><br />
+			<p style="display: inline-block">
+				<div class="linkBox">
+					<b>User interface:</b><br />
+					<ol style="list-style-type: none;margin-top:0;">
+						<li><a href="#Properties">Properties</a></li>
+						<li><a href="#Animation">Animation</a></li>
+						<li><a href="#Sounds">Sounds</a></li>
+						<li><a href="#Other">Other</a></li>
+					</ol>
+					<hr />
+					<br />
+					<b>FAQ:</b><br />
+					<ol style="list-style-type: none;margin-top:0;">
+						</li><a href="#Ai-list">AI patterns explained</a></li>
+						<li><a href="#Sprite-doesnt-show">My sprite doesn't show in game</a></li>
+					</ol>
+				</div>
+				PekaSE (<b>Pe</b>kka <b>Ka</b>na <b>S</b>prite <b>E</b>ditor) is a modern sprite editor for Pekka Kana 2.<br />
+				It allows you to create sprites rather easily. The user interface was designed with usability in mind, so 
+				most of the important things are grouped together. <br />Leading to a clear interface, that is easy to use.<br /><br />
+				<br /><br />
+				<br /><br />
+				<br /><br />
+				<br /><br />
+				<br />
+				<h2><a name="Properties">Properties</a></h2>
+				<hr />
+					<img alt="Properties tab" src="img/pkse1.png"><br />
+					The following table explains every propertie present in the screenshot.<br /><br />
+					<i>Max length</i> is the maximum amount of characters this propertie can have. <br />This limit includes the four characters of: <i>".bmp"</i>, <i>".wav"</i> and <i>".spr"</i>.
+					<br />So the actual length is MAX LENGTH - 4.<br />
+					<br />This limit only affects strings, so if there is no limit the value is a number and it doesn't really matter.</br />
+					<span style="font-size:11">(Of course you have to stay in the limits of the integer and double types, but they are so big that you don't have to worry about them.)</span><br /><br />
+					<table style="font-size: 14px;">
+						<tr>
+							<td><b>Propertie: TODO</b></td><td><b>Explanation:</b></td><td><b>Max length:</b></td>
+						</tr>
+						<tr>
+							<td>Image</td><td>The image file/sprite sheet for your sprite.</td><td>100</td>
+						</tr>
+						<tr>
+							<td>Position X</td><td>The position of your sprite in the image file. (Example below)</td><td></td>
+						</tr>
+						<tr>
+							<td>Position Y</td><td>Same as Position X, but for the Y coordinate.</td><td></td>
+						</tr>
+						<tr>
+							<td>Frame width</td><td>The width of your sprite, in the image file.</td><td></td>
+						</tr>
+						<tr>
+							<td>Frame height</td><td>Same as Frame width, but for height</td><td></td>
+						</tr>
+						<tr>
+							<td>Sprite width</td><td>The width of your sprite in the game. (Example below)</td><td></td>
+						</tr>
+						<tr>
+							<td>Sprite height</td><td>Same as Sprite width, but for height</td><td></td>
+						</tr>
+						<tr>
+							<td>Name</td><td>The name of your sprite. (This will only show up in the level editor, it's not used in game.)</td><td>32</td>
+						</tr>
+						<tr>
+							<td>Ammo Sprite 1</td><td>This sprite will be shot, if your sprite uses it's first attack.</td><td>100</td>
+						</tr>
+						<tr>
+							<td>Ammo Sprite 2</td><td>This sprite will be shot, if your sprite uses it's second attack.</td><td>100</td>
+						</tr>
+						<tr>
+							<td>Type</td><td>The type of your sprite determines it's function. E.g. a character sprite can be controlled.</td><td></td>
+						</tr>
+						<tr>
+							<td>Color</td><td>This propertie determines the color of your sprite.</td><td></td>
+						</tr>
+						<tr>
+							<td>Damage Type</td><td>This determines which type of damage your sprites does.</td><td></td>
+						</tr>
+						<tr>
+							<td>Immunity</td><td>Which type of damage your sprite doesn't take damage from.</td><td></td>
+						</tr>
+						<tr>
+							<td>Weight</td><td>A weight of 0 allows your sprite to fly. <br />A weight above or equal to 1 doesn't and activates switches. <br />A weight below 0 will cause your sprite to rise up (fast). <br />A higher weight also causes more damage, when falling onto an enemy.</td><td></td>
+						</tr>
+						<tr>
+							<td>Energy</td><td>The amount of hit points your sprite has.<br />If the sprite is a bonus item, energy will restore this many hit points. (E.g. feathers)</td><td></td>
+						</tr>
+						<tr>
+							<td>Damage</td><td>How much damage your sprite does, to other sprites.</td><td></td>
+						</tr>
+						<tr>
+							<td>Score</td><td>If the sprite is of type <i>Character Sprite</i> this value determines the points you will receive when knocking it out.<br />If the sprite is of type <i>Bonus Item Sprite</i> this determines how many points you receive when picking it up.</td><td></td>
+						</tr>
+						<tr>
+							<td>Max speed</td><td>The maximum speed of your sprite.<br />0 = Not moving<br/>4 = Normal speed</td><td></td>
+						</tr>
+						<tr>
+							<td>Max Jump</td><td>The duration of the jump.<br />Normal jump is around 20 to 25.</td><td></td>
+						</tr>
+						<tr>
+							<td>Reload time</td><td>How long the sprite waits before shooting again, in frames.</td><td></td>
+						</tr>
+						<tr>
+							<td>Attack pause</td><td>If the sprite is of type <i>Ammo Sprite</i>, this will determine the time between each attack.</td><td></td>
+						</tr>
+						<tr>
+							<td>Enemy</td><td>Determines if this sprite is an enemy.</td><td></td>
+						</tr>
+						<tr>
+							<td>Boss</td><td>Determines if this sprite is a boss.<br />If a boss sprite is knocked out skull switches will rotate.</td><td></td>
+						</tr>
+						<tr>
+							<td>Key</td><td>Determines if this sprite is a key or can open locks.</td><td></td>
+						</tr>
+						<tr>
+							<td>Obstacle</td><td>Determines if this sprite is a wall.</td><td></td>
+						</tr>
+					</table>
+					<br />
+					<h4>Example</h4>
+						<img alt="Example" src="img/example.png"><br />
+					<br />
+					The red dot in the top left corner represent the <i>Position X</i> and <i>Position Y</i> properties.<br />
+					The blue line at the bottom represents the <i>Frame width</i> propertie and the green line to the right the <i>Frame height</i> propertie.<br />
+					The yellow rectangle in the middle represents the <i>Sprite width</i> and <i>Sprite height</i> properties.<br /><br />
+					These values are used to cut out the sprite's image, that you see in the game, from the image file.
+					<br />
+					<h2><a name="Animation">Animation</a></h2><hr /><br />
+					<img alt="Animation tab" src="img/pkse2.png"><br />
+					<br />
+					The buttons at the top play each play their respective animation, if you click on them.<br />
+					The <i>Stop</i> button stops the animation.<br /><br />
+					The <i>Loop</i> checkbox determines if your sprite's animation loops.<br />
+					<br />
+					Each frame is separated by a comma and each number represents a frame.<br />
+					Zero marks the end of an animation.</br /><br />
+					The <i>Show frames</i> button shows you all of the sprite's frames.<br />
+					<span style="font-size:12"><b>Note:</b> Make sure that you have set the <i>Frames</i> propertie correctly. If you don't see all your sprite's frames, check the <i>Frames</i> propertie.</span>
+					<br />
+					<br />
+					<table style="font-size: 14px;margin:auto;">
+						<tr>
+							<td><b>Propertie:</b></td><td><b>Explanation:</b></td>
+						</tr>
+						<tr>
+							<td>Frame rate</td><td>The duration of one animation frame, in game frames.</td>
+						</tr>
+						<tr>
+							<td>Frames</td><td>The number of your sprite's frames.</td>
+						</tr>
+						<tr>
+							<td>Animations</td><td>The number of animations. If you set all of them this value would be 9.</td>
+						</tr>
+						<tr>
+							<td>Attack 1 duration</td><td>The duration of the Attack 1 animation, in frames.</td>
+						</tr>
+						<tr>
+							<td>Attack 2 duration</td><td>The duration of the Attack 2 animation, in frames.</td>
+						</tr>
+					</table>
+					<br />
+					<h2><a name="Sounds">Sounds</a></h2>
+					<hr /><br />
+					<img alt="Sounds tab" src="img/pkse3.png"><br />
+					<br />
+					The <i>Browse</i> button opens a dialog, which lets you choose a file.<br />
+					The <i>Play</i> buttons each play their respective sound.<br /><br />
+					<br />
+					<table style="font-size: 14px; margin:auto;">
+						<tr>
+							<td><b>Propertie:</b></td><td><b>Explanation:</b></td>
+						</tr>
+						<tr>
+							<td>Damage</td><td>The sounds the sprite plays when it gets damaged.</td>
+						</tr><tr>
+							<td>Knock out</td><td>The sound the sprite plays when it gets knocked out.</td>
+						</tr>
+						<tr>
+							<td>Attack 1</td><td>The sound of the first attack.</td>
+						</tr>
+						<tr>
+							<td>Attack 2</td><td>The sound of the second attack.</td>
+						</tr>
+						<tr>
+							<td>Random</td><td>This sound plays randomly.</td>
+						</tr>
+						<tr>
+							<td>Sound frequency</td><td>The frequency of all the sound effects, of this sprite.</td>
+						</tr>
+						<tr>
+							<td>Random frequency</td><td>Determines if sounds are played at random frequencies.</td>
+						</tr>
+					</table>
+					<br />
+					All sound files can have a maximum length of 100 characters, including the ".wav".
+					<br />
+					<br />
+					<h2><a name="Other">Other</a></h2>
+					<hr />
+					<br />
+					<img alt="Other tab" src="img/pkse4.png"><br /><br />
+					The <i>Destruction</i> propertie determines the graphical effects, that appear when the sprite is knocked out.
+					<br />
+					<i>AI patterns</i> determine the behavior of the sprite. (A full list explaining all patterns can be found <a href="#Ai-list">here</a>.)<br /><br />
+					<table style="font-size: 14px;margin:auto;">
+						<tr>
+							<td><b>Propertie: TODO</b></td><td><b>Explanation:</b></td><td><b>Max length:</b></td>
+						</tr>
+						<tr>
+							<td>Transformation sprite</td><td>The sprite this sprite turns into, when knocked out.</td><td>100</td>
+						</tr>
+						<tr>
+							<td>Bonus Sprite</td><td>The sprite this sprite drops, when knocked out.</td><td>100</td>
+						</tr>
+						<tr>
+							<td>Parallax factor</td><td>Relation to background image</td><td></td>
+						</tr>
+						<tr>
+							<td>Bonuses</td><td>The number of bonuses the sprite drops, when knocked out.</td><td></td>
+						</tr>
+						<tr>
+							<td>Shakes</td><td>Determines if the sprite shakes randomly.</td><td></td>
+						</tr>
+						<tr>
+							<td>Tile check</td><td>Determines if the sprite can't walk/fly through walls.</td><td></td>
+						</tr>
+						<tr>
+							<td>Swim</td><td>Determines if the sprite can swim.</td><td></td>
+						</tr>
+						<tr>
+							<td>Glide</td><td>Determines if the sprite can glide down.</td><td></td>
+						</tr>
+						<tr>
+							<td>Always bonus</td><td>Determines if the sprite always drops its bonuses, when knocked out.</td><td></td>
+						</tr>
+						<tr>
+							<td>Wall up</td><td>The sprites works as a wall upwards.</td><td></td>
+						</tr>
+						<tr>
+							<td>Wall down</td><td>The sprites works as a wall downwards.</td><td></td>
+						</tr>
+						<tr>
+							<td>Wall left</td><td>The sprites works as a wall to the left.</td><td></td>
+						</tr>
+						<tr>
+							<td>Wall right</td><td>The sprites works as a wall to the right.</td><td></td>
+						</tr>
+					</table>
+					<br />
+					<h2>FAQ</h2>
+					<hr /><br />
+					<h3><a name="Ai-list">AI patterns explained</a></h3><br />
+					(B) = AI affects Bonus Sprites<br />
+					(P) = AI affects also when sprite is controlled by player<br /><br />
+					The following list is taken from the offical Sprite Spec., which can be found <a href="http://kiwi.mbnet.fi/pistegamez/pk2/pk2_sprite.txt">here</a>.
+					<br /><br />
+					<table style="font-size: 14px;margin:auto;">
+						<tr>
+						<td>No AI</td><td>Marks the last AI.</td>
+						</tr>
+						<tr>
+						<td>Chicken</td><td>Sprite jumps randomly and tries to get over obstacles.</td>
+						</tr>
+						<tr>
+						<td>An Egg</td><td>Sprite dies, if it hits the floor.</td>
+						</tr>
+						<tr>
+						<td>Baby Chicken</td><td>Same as Chicken, but it tries to follow the player.</td>
+						</tr>
+						<tr>
+						<td>Bonus (B)</td><td></td>
+						</tr>
+						<tr>
+						<td>Jumper</td><td></td>
+						</tr>
+						<tr>
+						<td>Basic AI (B)</td><td>Sprite won't get off the map and looks at the same direction it's walking.</td>
+						</tr>
+						<tr>
+						<td>Turn horizontally</td><td>Sprite turns horizontally if it hits an obstacle.</td>
+						</tr>
+						<tr>
+						<td>Looks Out for Cliffs</td><td>Sprite turns horizontally before it falls down from a cliff.</td>
+						</tr>
+						<tr>
+						<td>Random Horizontal Change of Direction</td><td>Sprite turns horizontally at random points.</td>
+						</tr>
+						<tr>
+						<td>Random Jumping</td><td>Sprite jumps randomly.</td>
+						</tr>
+						<tr>
+						<td>Follow the Player</td><td>Sprite follows the player even if it doesn't see it.</td>
+						</tr>
+						<tr>
+						<td>Random Horizontal Change of Direction</td><td>Sprite turns horizontally at random points.</td>
+						</tr>
+						<tr>
+						<td>Follow the Player if Player is in Front</td><td>Sprite follows the player only if it sees it.</td>
+						</tr>
+						<tr>
+						<td>Transformation If Energy Below 2 (P)</td><td>Sprite changes to Transformation Sprite when it's energy drops below 2.</td>
+						</tr>
+						<tr>
+						<td>Transformation If Energy above 1 (P)</td><td>Sprite changes to Transformation Sprite when it's energy rises over 1.</td>
+						</tr>
+						<tr>
+						<td>Start Directions Towards Player</td><td></td>
+						</tr>
+						<tr>
+						<td>Ammonition</td><td></td>
+						</tr>
+						<tr>
+						<td>Non Stop</td><td>Sprite is not affected by friction.</td>
+						</tr>
+						<tr>
+						<td>Attack 1 If Damaged</td><td></td>
+						</tr>
+						<tr>
+						<td>Self Destruction</td><td></td>
+						</tr>
+						<tr>
+						<td>Attack 1 If Player is in Front</td><td></td>
+						</tr>
+						<tr>
+						<td>Attack 1 If Pleyer is Below</td><td></td>
+						</tr>
+						<tr>
+						<td>Damaged by Water (P)</td><td></td>
+						</tr>
+						<tr>
+						<td>Attack 2 If Player is in Front</td><td></td>
+						</tr>
+						<tr>
+						<td>Kill 'em all</td><td>Sprite damages both enemies and friends.</td>
+						</tr>
+						<tr>
+						<td>Affected by Friction</td><td>Friction slows the sprite down and stops it.</td>
+						</tr>
+						<tr>
+						<td>Hide</td><td>Sprite ducks if it's behind tile 144.</td>
+						</tr>
+						<tr>
+						<td>Return to Start Position X</td><td>After nothing better to do the sprite always tries to return to it's start position.</td>
+						</tr>
+						<tr>
+						<td>Return to Start Position Y</td><td>After nothing better to do the sprite always tries to return to it's start position.</td>
+						</tr>
+						<tr>
+						<td>Teleport</td><td></td>
+						</tr>
+						<tr>
+						<td>Throwable Weapon</td><td></td>
+						</tr>
+						<tr>
+						<td>Falls When Shaken (B)</td><td></td>
+						</tr>
+						<tr>
+						<td>Change Trap Stones If KO'ed</td><td></td>
+						</tr>
+						<tr>
+						<td>Change Trap Stones If Damaged</td><td></td>
+						</tr>
+						<tr>
+						<td>Self Destructs With Mother Sprite</td><td></td>
+						</tr>
+						<tr>
+						<td>Moves X COS</td><td></td>
+						</tr>
+						<tr>
+						<td>Moves Y COS</td><td></td>
+						</tr>
+						<tr>
+						<td>Moves X SIN</td><td></td>
+						</tr>
+						<tr>
+						<td>Moves Y SIN</td><td></td>
+						</tr>
+						<tr>
+						<td>Moves X COS Fast</td><td></td>
+						</tr>
+						<tr>
+						<td>Moves Y SIN Fast</td><td></td>
+						</tr>
+						<tr>
+						<td>Moves X COS Slow</td><td></td>
+						</tr>
+						<tr>
+						<td>Moves Y SIN Slow</td><td></td>
+						</tr>
+						<tr>
+						<td>Moves Y SIN Free</td><td></td>
+						</tr>
+						<tr>
+						<td>Random Turning</td><td></td>
+						</tr>
+						<tr>
+						<td>Jump If Player Is Above</td><td></td>
+						</tr>
+						<tr>
+						<td>Transformation Timer (B)</td><td></td>
+						</tr>
+						<tr>
+						<td>Falls If Switch 1 Is Pressed (B)</td><td></td>
+						</tr>
+						<tr>
+						<td>Falls If Switch 2 Is Pressed (B)</td><td></td>
+						</tr>
+						<tr>
+						<td>Falls If Switch 3 Is Pressed (B)</td><td></td>
+						</tr>
+						<tr>
+						<td>Moves Down  If Switch 1 Is Pressed</td><td></td>
+						</tr>
+						<tr>
+						<td>Moves Up    If Switch 1 Is Pressed</td><td></td>
+						</tr>
+						<tr>
+						<td>Moves Right If Switch 1 Is Pressed</td><td></td>
+						</tr>
+						<tr>
+						<td>Moves Left  If Switch 1 Is Pressed</td><td></td>
+						</tr>
+						<tr>
+						<td>Moves Down  If Switch 2 Is Pressed</td><td></td>
+						</tr>
+						<tr>
+						<td>Moves Up    If Switch 2 Is Pressed</td><td></td>
+						</tr>
+						<tr>
+						<td>Moves Right If Switch 2 Is Pressed</td><td></td>
+						</tr>
+						<tr>
+						<td>Moves Left  If Switch 2 Is Pressed</td><td></td>
+						</tr>
+						<tr>
+						<td>Moves Down  If Switch 3 Is Pressed</td><td></td>
+						</tr>
+						<tr>
+						<td>Moves Up    If Switch 3 Is Pressed</td><td></td>
+						</tr>
+						<tr>
+						<td>Moves Right If Switch 3 Is Pressed</td><td></td>
+						</tr>
+						<tr>
+						<td>Moves Left  If Switch 3 Is Pressed</td><td></td>
+						</tr>
+						<tr>
+						<td>Turns Vertically From Obstacle</td><td></td>
+						</tr>
+						<tr>
+						<td>Random Vertical Starting Direction</td><td></td>
+						</tr>
+						<tr>
+						<td>Starting Direction Towards Player</td><td></td>
+						</tr>
+						<tr>
+						<td>Climber</td><td>Sprite bounces from walls, floor and ceiling</td>
+						</tr>
+						<tr>
+						<td>Climber Type 2</td><td>Sprite moves along walls (kind of)</td>
+						</tr>
+						<tr>
+						<td>Runs Away From Player If Sees Player</td><td></td>
+						</tr>
+						<tr>
+						<td>Reborn (B)</td><td>A new item appears when sprite is collected</td>
+						</tr>
+						<tr>
+						<td>Arrow Left</td><td>These set the direction of the sprite, if the sprite has AI <i>"Move to Arrows Direction"</i>.</td>
+						</tr>
+						<tr>
+						<td>Arrow Righ</td><td></td>
+						</tr>
+						<tr>
+						<td>Arrow Up</td><td></td>
+						</tr>
+						<tr>
+						<td>Arrow Down</td><td></td>
+						</tr>
+						<tr>
+						<td>Move to Arrows Direction</td><td></td>
+						</tr>
+						<tr>
+						<td>Background Sprite Moon</td><td></td>
+						</tr>
+						<tr>
+						<td>Background Sprite Moves to Left</td><td></td>
+						</tr>
+						<tr>
+						<td>Background Sprite Moves to Right</td><td></td>
+						</tr>
+						<tr>
+						<td>Add Time to Clock</td><td>Add time from Reload time</td>
+						</tr>
+						<tr>
+						<td>Make Player Invisible</td><td>Set invicibility time from Reload time</td>
+						</tr>
+						<tr>
+						<td>Follow the Player Vertic. and Horiz.</td><td>Sprite follows the player even if doesn't see it.</td>
+						</tr>
+						<tr>
+						<td>Follow the Player Vertic. and Horiz.</td><td></td>
+						</tr>
+						<tr>
+						<td>if Player is in Front</td><td>Sprite follows the player only if sees it.</td>
+						</tr>
+						<tr>
+						<td>Random Move Vertic. and Horiz.</td><td></td>
+						</tr>
+						<tr>
+						<td>Frog Jump 1</td><td></td>
+						</tr>
+						<tr>
+						<td>Frog Jump 2</td><td></td>
+						</tr>
+						<tr>
+						<td>Frog Jump 3</td><td></td>
+						</tr>
+						<tr>
+						<td>Attack 2 if Damaged</td><td></td>
+						</tr>
+						<tr>
+						<td>Attack 1 Non Stop</td><td></td>
+						</tr>
+						<tr>
+						<td>Attack 2 Non Stop</td><td></td>
+						</tr>
+						<tr>
+						<td>Turn if Damaged</td><td></td>
+						</tr>
+						<tr>
+						<td>Evil One</td><td></td>
+						</tr>
+						<tr>
+						<td>Info 1</td><td>use doodle attack to knock out enemys.</td>
+						</tr>
+						<tr>
+						<td>Info 2</td><td>use egg attack to knock out enemys.</td>
+						</tr>
+						<tr>
+						<td>Info 3</td><td>collect all keys to open all locks.</td>
+						</tr>
+						<tr>
+						<td>Info 4</td><td>you can activate switches by jumping on them.</td>
+						</tr>
+						<tr>
+						<td>Info 5</td><td>green switches activate green blocks.</td>
+						</tr>
+						<tr>
+						<td>Info 6</td><td>blue switches activate blue blocks.</td>
+						</tr>
+						<tr>
+						<td>Info 7</td><td>orange switches turn off fire.</td>
+						</tr>
+						<tr>
+						<td>Info 8</td><td>collect gifts to obtain useful items.</td>
+						</tr>
+						<tr>
+						<td>Info 9</td><td>if you are hit, feathers will give you energy.</td>
+						</tr>
+						<tr>
+						<td>Info 10</td><td>a drink from a magic bottle will change you...</td>
+						</tr>
+						<tr>
+						<td>Info 11</td><td>drink doodle drinks to and get special doodle attacks.</td>
+						</tr>
+						<tr>
+						<td>Info 12</td><td>drink hatching-booster and get special egg attacks.</td>
+						</tr>
+						<tr>
+						<td>Info 13</td><td>look for hidden bonuses!</td>
+						</tr>
+						<tr>
+						<td>Info 14</td><td>you can stomp on enemys, but you will lose energy.</td>
+						</tr>
+						<tr>
+						<td>Info 15</td><td>look out for traps!</td>
+						</tr>
+						<tr>
+						<td>Info 16</td><td>hurry up! your time is limited!</td>
+						</tr>
+						<tr>
+						<td>Info 17</td><td>be aware that some enemys resist certain attacks.</td>
+						</tr>
+						<tr>
+						<td>Info 18</td><td>a hen is mightier than the sword.</td>
+						</tr>
+						<tr>
+						<td>Info 19</td><td>why did the chicken cross the road?</td>
+						</tr>
+					</table>
+					<br />
+					<h3><a name="Sprite-doesnt-show">My sprite doesn't show in game</a></h3>
+					First of all, make sure that the name of your sprite plus the ".spr" doesn't exceed a total of 13 characters.<br />
+					If that is not the case, then check if you placed the sprites image file in the same folder as the sprite file itself.<br />
+					If that also checks out, make sure that you have set the <i>Position X/Y</i> and <i>Frame width/height</i> correctly.
+			</p>
+		</div>
+	</body>
+</html>
