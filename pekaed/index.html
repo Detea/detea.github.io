@@ -37,7 +37,7 @@
 		
 		.main {
 			margin: auto;
-			width: 900px;
+			width: 1024px;
 			height: auto;
 			min-height: 700px;
 			border-left: 1px #d6d6d6 solid;
@@ -126,6 +126,7 @@
 				<li><a href="#Episodes">Episodes</a></li>
 				<li><a href="#Testing">Testing your level</a></li>
 				<li><a href="#Highlight-Sprites">Highlight Sprites</a></li>
+				<li><a href="#Exporting-episode">Exporting your episode</a></li>
 			</ol>
 		</div>
 			This editor was created, because the official editor for Pekka Kana 2 doesn't run well on modern operating systems
@@ -153,7 +154,7 @@
 		<p>
 			<br />
 			<img alt="Screen of toolbar, with numbers" src="toolbar.png"><br />
-			<table style="border:0;font-size: 14px;">
+			<table style="border:0;font-size: 14px;margin:auto;">
 			<tr>
 				<td><b>Figure 1:</b> Create a new empty level.</td><td><i>Shortcut: CTRL + N</i></td>
 			</tr>
@@ -195,6 +196,18 @@
 			</tr>
 			<tr>
 				<td></td><td><i>Shortcut: CTRL + 2 - Sprite mode</i></td>
+			</tr>
+			<tr>
+				<td><b>Figure 12:</b> Set zoom level.</span></td><td><i>Shortcut: + to zoom in</i></td>
+			</tr>
+			<tr>
+				<td></td><td><i>Shortcut: - to zoom out</i></td>
+			</tr>
+			<tr>
+				<td><b>Figure 13:</b> Reset zoom level.</span></td><td><i>Shortcut: None</i></td>
+			</tr>
+			<tr>
+				<td><b>Figure 14:</b> Set the game/editor limitations <span class="seeLink">(See: <a href="#Modes">Modes</a>).</span></td><td><i>Shortcut: None</i></td>
 			</tr>
 			</table>
 		</p><br />
@@ -262,7 +275,14 @@
 			Depending on your selected tool you can add, erase and select, one or multiple, tiles from/to the level. <span class="seeLink">(See <a href="#Tools">Tools</a>)</span><br /><br />
 			To add a tile to the level, navigate to the <a href="#Tiles-Panel">Tiles Panel</a>, select the tile/s you want and simply press, or hold and drag, the left mouse button on the level panel.<br /><br />
 			To add a sprite, navigate to the <a href="#Sprites-Panel">Sprites Panel</a>, add or select a sprite and press, or drag, on the level panel.<br />
-			To remove a sprite from the level, simply press or drag on the level panel.<br />
+			To remove a sprite from the level, simply press or drag on the level panel.<br /><br /><br />
+			You have multiple options to navigate this panel.<br />
+			You can scroll using the arrow keys. If this doesn't work, simply move your mouse cursor onto the level panel.<br />
+			You can also move the level panel by holding down the middle mouse button and moving your mouse.<br />
+			The last option is to just scroll the mouse wheel. This will scroll the level panel up and down.<br />
+			You can scroll left to right by holding down ALT while scrolling the mouse wheel.<br />
+			<br />
+			To zoom into the level panel scroll the mouse wheel up while holding CTRL, to zoom out scroll down, while holding CTRL.
 		</p><br />
 		<a name="Properties-Panel"><h2>Properties Panel</h2></a><hr />
 		<p style="display:inline-block">
@@ -365,6 +385,7 @@
 				<tr><td>Legacy:</td><td>In this mode you can add up to 50 levels to an episode. This is a limitation of Pekka Kana 2.</td></tr>
 				<tr><td>Enhanced:</td><td>In the enhanced mode you can set the limit yourself. It defaults to 100.</td></tr>
 				<tr><td><br /></td></tr>
+				<tr><td></td><td><b>Hint:</b> If you are using the SDL port you can also use MP3 and OGG music files in your levels, when in Enhanced mode.
 				<tr><td></td><td><b>Note:</b> You have so set the limit to something that your version of the game can support. You can't use a higher limit than that, that's allowed by your version of Pekka Kana 2.</td></tr>
 				<tr><td></td><td><b>Note:</b> PekaED is optimized to work a specific version. Which you can find <a href="https://github.com/danilolc/pk2">here.</a></td></tr>
 			</table>
@@ -382,7 +403,9 @@
 			You can create a new episode with PekaED. Simple click on <i>File -> New Episode</i>, enter a name and save.<br />
 			PekaED automatically creates a folder in the episodes folder of your game.<br /><br />
 			To load an episode click on <i>File -> Open Episode</i>.<br />
-			To save your episode click on <i>File -> Save Episode</i>.<br /><br />
+			To save your episode click on <i>File -> Save Episode</i>.<br />
+			To import an existing episode clock on <i>File -> Import Episode</i>.<br />
+			To export your episode click on <i>File -> Export episode</i>.<br /><br />
 			The benefit of creating, or importing, your episode with/into PekaED is that you have an overview over all the levels and can quickly load them just by double clicking on them, in the <a href="#Episode-Panel">Episode Panel</a>.
 		</p><br />
 		<a name="Testing"><h2>Testing your level</h2></a><hr />
@@ -394,7 +417,7 @@
 		<a name="Highlight-Sprites"><h2>Highlight Sprites</h2></a><hr />
 		<p>
 			<img src="rect.png" style="margin: 0 auto;border:1px black solid;"><br />
-			If you have sprite highlighting enabled, PekaED will draw a white rectangle at the position, where it draw the sprite. These rectangles are 32 by 32 pixels and not the width and height of the actual sprite,
+			If you have sprite highlighting enabled, PekaED will draw a white rectangle at the position, where it draws the sprite. These rectangles are 32 by 32 pixels and not the width and height of the actual sprite,
 			because the sprites are stored in an array, imagine a grid, where it saves a number for each sprite. For example at position 320, 240 is the Pekka Kana sprite. Let's say that sprites number is '1'.
 			<br />
 			So the number at position 10, 7 would be '1'. 10 and 7, because you have to divide the position by the size of the tiles. In this case 32. This is a pretty vague explanation, because it's pretty technical.<br /><br />
@@ -402,7 +425,14 @@
 			<br />
 			<br />
 			These rectangles will only show when you're in sprite mode. <span class="seeLink">(See: <a href="#Editing-Modes">Editing Modes</a>)</span>
-		</p>
+		</p><br />
+		<a name="Exporting-episode"><h2>Exporting your episode</h2></a><hr />
+			Instead of collecting every single sprite, graphic, etc. you can simply export your episode in PekaED!<br /><br />
+			Make sure to load/import your episode first.<br />
+			Now click on <i>File -> Export episode</i>. PekaED will prompt you to enter a name and select a place to save your episode archive. Enter a name and click <i>Save</i>. That's it. PekaED will collect all needed files for you and put it in a ZIP file.<br /><br />
+			<b>Hints:</b><br />
+			If you are using a custom "<i>pk2stuff.bmp</i>" file place it in your episodes folder, PekaED will take it and put it in the ZIP file, too.<br />
+			You can also place a "<i>readme.txt</i>" file into your episodes folder. Write whatever you want into it, give credits, thanks, instructions, a story, PekaED will put it into the ZIP for you.
 	</div><br />
 	<div class="footer">
 		Found a bug in PekaED? Submit it <a href="https://github.com/Detea/PekaED/issues">here!</a> | Found an error in the manual? Report it <a href="https://github.com/Detea/detea.github.io/issues">here!</a>
