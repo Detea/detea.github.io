@@ -126,6 +126,7 @@
 				<li><a href="#Episodes">Episodes</a></li>
 				<li><a href="#Testing">Testing your level</a></li>
 				<li><a href="#Highlight-Sprites">Highlight Sprites</a></li>
+				<li><a href="#Exporting-episode">Exporting your episode</a></li>
 			</ol>
 		</div>
 			This editor was created, because the official editor for Pekka Kana 2 doesn't run well on modern operating systems
@@ -152,7 +153,8 @@
 		<a name="Toolbar"><h2>Toolbar</h2></a><hr />
 		<p>
 			<br />
-			<img alt="Screen of toolbar, with numbers" src="toolbar.png"><br />
+			<a href="toolbar.png"><img alt="Screen of toolbar, with numbers" style="width: 100%;border:1px black solid;" src="toolbar.png"></a>
+			<center><span style="font-size:10px;">Click image to show full.</span></center><br />
 			<table style="border:0;font-size: 14px;">
 			<tr>
 				<td><b>Figure 1:</b> Create a new empty level.</td><td><i>Shortcut: CTRL + N</i></td>
@@ -167,13 +169,13 @@
 				<td><b>Figure 4:</b> Save the currently opened level as...</td><td><i>Shortcut: CTRL + Shift + S</i></td>
 			</tr>
 			<tr>
-				<td><b>Figure 5:</b> Test the currently opened level. <span class="seeLink">(See: <a href="#Testing">Test your level</a>)</td><td><i>Shortcut: F5</i></td>
+				<td><b>Figure 5:</b> Test the currently opened level. <span class="seeLink">(See: <a href="#Testing">Test your level</a>)</span></td><td><i>Shortcut: F5</i></td>
 			</tr>
 			<tr>
-				<td><b>Figure 6:</b> Select the brush tool. <span class="seeLink">(See: <a href="#Tools">Tools</a>)</td><td><i>Shortcut: E</i></td>
+				<td><b>Figure 6:</b> Select the brush tool. <span class="seeLink">(See: <a href="#Tools">Tools</a>)</span></td><td><i>Shortcut: E</i></td>
 			</tr>
 			<tr>
-				<td><b>Figure 7:</b> Select the eraser tool. <span class="seeLink">(See: <a href="#Tools">Tools</a>)</td><td><i>Shortcut: R</i></td>
+				<td><b>Figure 7:</b> Select the eraser tool. <span class="seeLink">(See: <a href="#Tools">Tools</a>)</span></td><td><i>Shortcut: R</i></td>
 			</tr>
 			<tr>
 				<td><b>Figure 8:</b> Show or hide the sprites.</td><td><i>Shortcut: S</i></td>
@@ -182,7 +184,10 @@
 				<td><b>Figure 9:</b> Toggle sprite highlighting.</td><td><i>Shortcut: H</i></td>
 			</tr>
 			<tr>
-				<td><b>Figure 10:</b> Select the current layer. <span class="seeLink">(See: <a href="#Layers">Layers</a>)</span></td><td><i>Shortcut: 1 - Both</i></td>
+				<td><b>Figure 10:</b> Show the tile number, in the tile panel.</td><td><i>No shortcut</i></td>
+			</tr>
+			<tr>
+				<td><b>Figure 11:</b> Select the current layer. <span class="seeLink">(See: <a href="#Layers">Layers</a>)</span></td><td><i>Shortcut: 1 - Both</i></td>
 			</tr>
 			<tr>
 				<td></td><td><i>Shortcut: 2 - Foreground</i></td>
@@ -191,12 +196,26 @@
 				<td></td><td><i>Shortcut: 3 - Background</i></td>
 			</tr>
 			<tr>
-				<td><b>Figure 11:</b> Select the current editing mode. <span class="seeLink">(See: <a href="#Editing-Modes">Editing Modes</a>)</span></td><td><i>Shortcut: CTRL + 1 - Tile mode</i></td>
+				<td><b>Figure 12:</b> Select the current editing mode. <span class="seeLink">(See: <a href="#Editing-Modes">Editing Modes</a>)</span></td><td><i>Shortcut: CTRL + 1 - Tile mode</i></td>
 			</tr>
 			<tr>
 				<td></td><td><i>Shortcut: CTRL + 2 - Sprite mode</i></td>
 			</tr>
+			<tr>
+				<td><b>Figure 13:</b> Set the current zoom level.</td><td><i>Shortcut: + to zoom in</i></td>
+			</tr>
+			<tr>
+				<td></td><td><i>Shortcut: - to zoom out</i></td>
+			</tr>
+			<tr>
+				<td><b>Figure 14:</b> Reset the current zoom level.</td><td><i>Shortcut: Space</i></td>
+			</tr>
+			<tr>
+				<td><b>Figure 15:</b> Set the editor mode. <span class="seeLink">(See: <a href="#Modes">Modes</a>)</span></td><td><i>No shortcut</i></td>
+			</tr>
 			</table>
+			<br />
+			Shortcuts can be changed under <i>Extras -> Settings -> Shortcuts</i>!
 		</p><br />
 		<a name="Tiles-Panel"><h2>Tiles Panel</h2></a><hr />
 		<p style="display:inline-block">
@@ -262,7 +281,14 @@
 			Depending on your selected tool you can add, erase and select, one or multiple, tiles from/to the level. <span class="seeLink">(See <a href="#Tools">Tools</a>)</span><br /><br />
 			To add a tile to the level, navigate to the <a href="#Tiles-Panel">Tiles Panel</a>, select the tile/s you want and simply press, or hold and drag, the left mouse button on the level panel.<br /><br />
 			To add a sprite, navigate to the <a href="#Sprites-Panel">Sprites Panel</a>, add or select a sprite and press, or drag, on the level panel.<br />
-			To remove a sprite from the level, simply press or drag on the level panel.<br />
+			To remove a sprite from the level, simply press or drag on the level panel.<br /><br />
+			You have multiple options to navigate this panel.<br />
+You can scroll using the arrow keys. If this doesn't work, simply move your mouse cursor onto the level panel.<br />
+You can also move the level panel by holding down the middle mouse button and moving your mouse.<br />
+The last option is to just scroll the mouse wheel. This will scroll the level panel up and down.<br />
+You can scroll left to right by holding down ALT while scrolling the mouse wheel.<br /><br />
+
+To zoom into the level panel scroll the mouse wheel up while holding CTRL, to zoom out scroll down, while holding CTRL.
 		</p><br />
 		<a name="Properties-Panel"><h2>Properties Panel</h2></a><hr />
 		<p style="display:inline-block">
@@ -328,6 +354,18 @@
 			<br />
 			<br />
 			<i>Level limit per episode</i> limits the amount of levels you can add to your episode. <span class="seeLink">(See: <a href="#Modes">Modes</a>)</span>
+			<br />
+			<br />
+			<table style="border: 0; margin: 0 auto;">
+				<tr><td>Show status bar</td><td>Show the status bar at the bottom, or not. Change requires a restart.</td></tr>
+				<tr><td>Show sprite preview</td><td>Determines if the sprite preview should show, in the file choose dialog, when you add a sprite.</td></tr>
+				<tr><td>Show tileset preview</td><td>Same as Show sprite preview, this shows the tileset in the file choose dialog.</td></tr>
+				<tr><td>Show background preview</td><td>Same as tileset preview, but for background image.</td></tr>
+			</table>
+			<br />
+			<br />
+			You can customize the default shortcuts under the <i>Shortcuts</i> tab.<br />
+			All these settings persist and are saved to the <i>settings</i> file.
 		</p><br />
 		<a name="Map-Dialog"><h2>Map Positioning Dialog</h2></a><hr />
 		<p>
@@ -335,6 +373,9 @@
 			<br />
 			Just click anywhere on the map, to set the position of your level on the map screen. When you're done just close the window.<br /><br />
 			If you have a custom map image, put it in the folder of your episode and PekaED will use your custom image, instead of the standard one!
+			<br /><br />
+			If you have created your episode in PekaED, or imported an existing one you can see the other levels on the map, too!<br /><br />
+			<img src="setPosEpisode.png" style="margin: 0 auto; border: 1px black solid">
 		</p><br />
 		<a name="Tools"><h2>Tools</h2></a><hr />
 		<p>
@@ -365,6 +406,7 @@
 				<tr><td>Legacy:</td><td>In this mode you can add up to 50 levels to an episode. This is a limitation of Pekka Kana 2.</td></tr>
 				<tr><td>Enhanced:</td><td>In the enhanced mode you can set the limit yourself. It defaults to 100.</td></tr>
 				<tr><td><br /></td></tr>
+				<tr><td></td><td><b>Hint:</b> If you are using the SDL port you can also use MP3 and OGG music files in your levels, when in Enhanced mode.</td></tr>
 				<tr><td></td><td><b>Note:</b> You have so set the limit to something that your version of the game can support. You can't use a higher limit than that, that's allowed by your version of Pekka Kana 2.</td></tr>
 				<tr><td></td><td><b>Note:</b> PekaED is optimized to work a specific version. Which you can find <a href="https://github.com/danilolc/pk2">here.</a></td></tr>
 			</table>
@@ -383,6 +425,8 @@
 			PekaED automatically creates a folder in the episodes folder of your game.<br /><br />
 			To load an episode click on <i>File -> Open Episode</i>.<br />
 			To save your episode click on <i>File -> Save Episode</i>.<br /><br />
+			To import an existing episode click on <i>File -> Import Episode</i>.<br /><br />
+			To export your episode click on <i>File -> Export episode</i>.<br /><br />
 			The benefit of creating, or importing, your episode with/into PekaED is that you have an overview over all the levels and can quickly load them just by double clicking on them, in the <a href="#Episode-Panel">Episode Panel</a>.
 		</p><br />
 		<a name="Testing"><h2>Testing your level</h2></a><hr />
@@ -403,6 +447,13 @@
 			<br />
 			These rectangles will only show when you're in sprite mode. <span class="seeLink">(See: <a href="#Editing-Modes">Editing Modes</a>)</span>
 		</p>
+		<a name="Exporting-episode"><h2>Exporting your episode</h2></a><hr />
+			Instead of collecting every single sprite, graphic, etc. you can simply export your episode in PekaED!<br /><br />
+			Make sure to load/import your episode first.<br />
+			Now click on <i>File -> Export episode</i>. PekaED will prompt you to enter a name and select a place to save your episode archive. Enter a name and click <i>Save</i>. That's it. PekaED will collect all needed files for you and put it in a ZIP file.<br /><br />
+			<b>Hints:</b><br />
+			If you are using a custom "<i>pk2stuff.bmp</i>" file place it in your episodes folder, PekaED will take it and put it in the ZIP file, too.<br />
+			You can also place a "<i>readme.txt</i>" file into your episodes folder. Write whatever you want into it, give credits, thanks, instructions, a story, PekaED will put it into the ZIP for you.
 	</div><br />
 	<div class="footer">
 		Found a bug in PekaED? Submit it <a href="https://github.com/Detea/PekaED/issues">here!</a> | Found an error in the manual? Report it <a href="https://github.com/Detea/detea.github.io/issues">here!</a>
