@@ -1,0 +1,222 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
+	<title>PK2Map.php documentation</title>
+	<style type="text/css">
+		@page { size: 21cm 29.7cm; margin-left: 0.94cm; margin-right: 1.11cm; margin-top: 2cm; margin-bottom: 2cm }
+		p { margin-bottom: 0.25cm; line-height: 115%; background: transparent }
+		td p { background: transparent }
+	</style>
+</head>
+<body link="#000080" vlink="#800000"><p style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<center><h2 style="font-family:Arial;">PK2Map.php documentation</h2></center>
+<font color="#000000"><font face="Arial, sans-serif"><font size="4" style="font-size: 14pt">Constants</font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2">
+<font color="#d4d4d4"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><span style="background: transparent"><font color="#ff0000">public</font>
+<font color="#569cd6">const</font> <font color="#000000">MAP_WIDTH</font>
+<font color="#000000">= 256;</font></span></font></font></font></p>
+<p style="margin-bottom: 0cm; font-weight: normal; line-height: 0.5cm">
+<font color="#d4d4d4"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><span style="background: transparent"><span style="font-variant: normal"><font color="#ff0000"><span style="letter-spacing: normal"><span style="font-style: normal">public</span></span></font></span>
+<font color="#569cd6">const</font> <font color="#000000">MAP_HEIGHT =
+224;</font></span></font></font></font></p>
+<p style="margin-bottom: 0cm; font-weight: normal; line-height: 0.5cm">
+<font color="#d4d4d4"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><span style="background: transparent"><span style="font-variant: normal"><font color="#ff0000"><span style="letter-spacing: normal"><span style="font-style: normal">public</span></span></font></span>
+<font color="#569cd6">const</font> <font color="#000000">MAP_SIZE =
+MAP_WIDTH * MAP_HEIGHT;</font></span></font></font></font></p>
+<p style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<br/>
+</p>
+<p style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#000000"><font face="Arial, sans-serif"><font size="4" style="font-size: 14pt">Methods</font></font></font></p>
+<p style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#000000"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><font color="#ff0000">public</font>
+<font color="#729fcf">function</font> load(<font color="#ff4000">$filename</font>,
+<font color="#ff4000">$load_foreground </font>=<font color="#ff4000">
+</font>false<font color="#ff4000">, $load_background </font>=<font color="#ff4000">
+</font>false<font color="#ff4000">, $load_sprites </font>=<font color="#ff4000">
+</font>false);</font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#000000"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">This
+function loads the file.</font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#000000"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><br/>
+<b>Parameters</b></font></font></font></p>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0cm"><p><font color="#ff4000"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">$filename</font></font></font></p>
+		</td>
+		<td style="border: none; padding: 0cm"><p><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Name
+			of the map file to load.</font></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0cm"><p><font color="#ff4000"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">$load_foreground</font></font></font></p>
+		</td>
+		<td style="border: none; padding: 0cm"><p><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Load
+			the foreground tiles? This is unessecary most of the time, thus
+			it's false by default.</font></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0cm"><p><font color="#ff4000"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">$load_background</font></font></font></p>
+		</td>
+		<td style="border: none; padding: 0cm"><p><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Same
+			as above, but for the background tiles.</font></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0cm"><p><font color="#ff4000"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">$load_sprites</font></font></font></p>
+		</td>
+		<td style="border: none; padding: 0cm"><p><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Same
+			as above, but for the sprite indexes.</font></font></p>
+		</td>
+	</tr>
+</table>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><b>Note:
+</b><span style="font-weight: normal">fore, back, and the sprite
+layers aren't fully implemented yet.</span></font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><span style="font-variant: normal"><font color="#ff0000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">public</span></span></span></font></span>
+<span style="font-variant: normal"><font color="#729fcf"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">function</span></span></span></font></span>
+getTileset();</font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Returns
+the name of the tileset file.</font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><span style="font-variant: normal"><font color="#ff0000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">public</span></span></span></font></span>
+<span style="font-variant: normal"><font color="#729fcf"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">function</span></span></span></font></span>
+getBackground();</font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Returns
+the name of the background file.</font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><span style="font-variant: normal"><font color="#ff0000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">public</span></span></span></font></span>
+<span style="font-variant: normal"><font color="#729fcf"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">function</span></span></span></font></span>
+getMusic();</font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Returns
+the name of the music file.</font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><span style="font-variant: normal"><font color="#ff0000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">public</span></span></span></font></span>
+<span style="font-variant: normal"><font color="#729fcf"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">function</span></span></span></font></span>
+getAuthor();</font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Returns
+the name of the Author of this map.</font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><span style="font-variant: normal"><font color="#ff0000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">public</span></span></span></font></span>
+<span style="font-variant: normal"><font color="#729fcf"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">function</span></span></span></font></span>
+getMapName();</font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Returns
+the name of the map. This is displayed on the overworld map.</font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><span style="font-variant: normal"><font color="#ff0000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">public</span></span></span></font></span>
+<span style="font-variant: normal"><font color="#729fcf"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">function
+</span></span></span></font></span><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">getLevelNumber();</span></span></span></font></span></font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Returns
+the number of the level, in the current episode.</span></span></span></font></span></font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><span style="font-variant: normal"><font color="#ff0000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">public</span></span></span></font></span><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">
+</span></span></span></font></span><span style="font-variant: normal"><font color="#729fcf"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">function
+</span></span></span></font></span><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">getPlayerSprite();</span></span></span></font></span></font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Returns
+an index to the prototype list, to indicate which sprite is the
+player sprite.</span></span></span></font></span></font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><span style="font-variant: normal"><font color="#ff0000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">public</span></span></span></font></span><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">
+</span></span></span></font></span><span style="font-variant: normal"><font color="#729fcf"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">function
+</span></span></span></font></span><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">getPrototypeList();</span></span></span></font></span></font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Returns
+the list of sprite files used in the level.</span></span></span></font></span></font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><span style="font-variant: normal"><font color="#ff0000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">public</span></span></span></font></span><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">
+</span></span></span></font></span><span style="font-variant: normal"><font color="#729fcf"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">function
+</span></span></span></font></span><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">getPrototypeAmount();</span></span></span></font></span></font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Returns
+the amount of sprite files used in the level.</span></span></span></font></span></font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><span style="font-variant: normal"><font color="#ff0000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">public</span></span></span></font></span><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">
+</span></span></span></font></span><span style="font-variant: normal"><font color="#729fcf"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">function
+</span></span></span></font></span><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">getMapX();</span></span></span></font></span></font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Returns
+the X position of the level on the overworld map.</span></span></span></font></span></font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><span style="font-variant: normal"><font color="#ff0000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">public</span></span></span></font></span><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">
+</span></span></span></font></span><span style="font-variant: normal"><font color="#729fcf"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">function
+</span></span></span></font></span><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">getMapY();</span></span></span></font></span></font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Returns
+the Y position of the level on the overworld map.</span></span></span></font></span></font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><span style="font-variant: normal"><font color="#ff0000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">public</span></span></span></font></span><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">
+</span></span></span></font></span><span style="font-variant: normal"><font color="#729fcf"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">function
+</span></span></span></font></span><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">getIcon();</span></span></span></font></span></font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Returns
+the index/number of the icon, that's shown on the overworld map, for
+this level.</span></span></span></font></span></font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><span style="font-variant: normal"><font color="#ff0000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">public</span></span></span></font></span><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">
+</span></span></span></font></span><span style="font-variant: normal"><font color="#729fcf"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">function
+</span></span></span></font></span><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">getWeather();</span></span></span></font></span></font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Returns
+an index to the weather list.</span></span></span></font></span></font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><span style="font-variant: normal"><font color="#ff0000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">public</span></span></span></font></span><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">
+</span></span></span></font></span><span style="font-variant: normal"><font color="#729fcf"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">function
+</span></span></span></font></span><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">getWeatherAsString();</span></span></span></font></span></font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Returns
+the weather as a string. (If weather is 1, for example, this would
+return &quot;Rain&quot;)</span></span></span></font></span></font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><span style="font-variant: normal"><font color="#ff0000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">public</span></span></span></font></span><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">
+</span></span></span></font></span><span style="font-variant: normal"><font color="#729fcf"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">function
+</span></span></span></font></span><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">getScrolling();</span></span></span></font></span></font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Returns
+the scrolling type of this level, as an index/number.</span></span></span></font></span></font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><span style="font-variant: normal"><font color="#ff0000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">public</span></span></span></font></span><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">
+</span></span></span></font></span><span style="font-variant: normal"><font color="#729fcf"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">function
+</span></span></span></font></span><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">get</span></span></span></font></span><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">ScrollingAsString();</span></span></span></font></span></font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">R</span></span></span></font></span><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">eturns
+the scrolling type as a string.</span></span></span></font></span></font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><span style="font-variant: normal"><font color="#ff0000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">public</span></span></span></font></span><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">
+</span></span></span></font></span><span style="font-variant: normal"><font color="#729fcf"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">function
+</span></span></span></font></span><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">get</span></span></span></font></span><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Time();</span></span></span></font></span></font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Returns
+the time limit of the level, in seconds.</span></span></span></font></span></font></font></p>
+</body>
+</html>
