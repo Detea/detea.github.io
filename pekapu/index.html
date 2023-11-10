@@ -1,0 +1,227 @@
+<html>
+<head>
+	<style>
+		body {
+			font-family: Verdana;
+			font-size: 14px;
+			background-color: rgb(46, 46, 49);
+			color: #e2e2e2;
+		}
+		
+		.linkBox {
+			background-color: rgb(73, 71, 71);
+			border: 1px #2c2c2c solid;
+			height: auto;
+			float: left;
+			margin-right: 10px;
+			padding: 10px;
+			
+			color:rgb(182, 182, 196);
+		}
+		
+		.header {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height:80px;
+			background: rgb(190,110,11);
+			background: linear-gradient(0deg, rgb(172, 98, 8) 9%, rgba(245,148,21,1) 100%);
+			text-align: center;
+			font-size: 40px;
+			font-weight: 550;
+			border-bottom: 1px black solid;
+			padding-top: 30px;
+			letter-spacing: 8px;
+		}
+		
+		.main {
+			margin: auto;
+			width: 1120px;
+			height: auto;
+			min-height: 700px;
+			border-left: 1px #1a1919 solid;
+			border-right: 1px #1a1919 solid;
+			border-bottom: 1px #1a1919 solid;
+			background-color: rgb(56, 56, 56);
+			margin-top: 80px;
+			padding: 10px;
+			font-size: 14px;
+		}
+		
+		.footer {
+			font-size:12px;
+			margin: auto;
+			width: 900px;
+			text-align: center;
+		}
+		
+		h2 {
+			margin-bottom: 0;
+			font-weight: normal;
+		}
+		
+		hr {
+			background-color: rgb(27, 27, 27);
+			margin-top: 0;
+			height: 1px;
+			border: 0;
+		}
+		
+		p {
+			margin-top: 5px;
+			display: block;
+			height: auto;
+		}
+		
+		a {
+			text-decoration: none;
+		}
+		
+		a:link {
+			color: #9e9ed3;
+		}
+
+		.seeLink {
+			font-size: 12px;
+		}
+		
+		img {
+			border: 1px black solid;
+			margin-left:auto;
+			margin-right:auto;
+			margin-top:5px;
+			display:block;
+		}
+	</style>
+	<title>Pekka Kana 2 Palette Utility Manual</title>
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+	<div class="header">
+		Pekka Kana 2 Palette Utility
+	</div>
+	<br />
+	<div class="main">
+		<br />
+		<h2>Table of contents</h2><hr />
+		<p style="display: inline-block;">
+			<div class="linkBox">
+			<b>Features:</b>
+            <li><a href="#MenusShortcuts">Menus & Shortcuts</a></li>
+            <li><a href="#UndoRedo">Undo/Redo</a></li>
+            <li><a href="#multiSelect">Selecting palette entries:</a></li>
+            <li><a hreF="#AbsoluteRelative">Absolute & Relative</a></li>
+            <br />
+            <b>Questions:</b>
+            <li><a href="#question1">My palette changes don't show up in the game.</a></li>
+            <li><a href="#question2">I changed a colors Hue/Saturation/Value but it's still white/black.</a></li>
+		</div>
+			<br />
+			<br /><br />
+			<br /><br />
+			<br /><br />
+			<br /><br />
+		</p><br />
+        <hr />
+        <h3><a name="MenusShortcuts">Menus & Shortcuts:</a></h3>
+        <table>
+            <tr><td><b>Menu</b></td><td><b>Item</b></td><td><b>Shortcut</b></td><td><b>Functionality</b></td></tr>
+            <tr><td>Image</td></tr>
+            <tr><td><center>&#8627;</center></td><td>Open</td><td>Ctrl+O</td><td>Loads an 8 bit image file for palette editing.</td></tr>
+            <tr><td><center>&#8627;</center></td><td>Convert</td><td>Ctrl+Shift+O</td><td>Loads an image that doesn't use a palette (PNG, JPEG) and converts it to a paletted image using the currently loaded palette.</td></tr>
+            <tr><td><center>&#8627;</center></td><td>Save</td><td>Ctrl+S</td><td>Saves the currently loaded image with the currently loaded color palette.</td></tr>
+            <tr><td><center>&#8627;</center></td><td>Save As...</td><td>Ctrl+Shift+S</td><td>Same as the "Save" menu, but you can select under what name the file is going to be saved as.</td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td>Palette</td></tr>
+            <tr><td><center>&#8627;</center></td><td>Export</td><td>Shift+E</td><td>Exports the currently loaded palette as a text file containing it's RGB values.</td></tr>
+            <tr><td><center>&#8627;</center></td><td>Import</td><td>Shift+I</td><td>Imports a previously exported color palette and sets it as the current palette.</td></tr>
+            <tr><td><center>&#8627;</center></td><td>Import from image...</td><td>Shift+F</td><td>Loads the palette from another 8 bit paletted image and sets it as the current palette.</td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td>Selection</td></tr>
+            <tr><td><center>&#8627;</center></td><td>Clear</td><td>Ctrl+C</td><td>Unselects all previously selected colors in the palette.</td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td>Help</td></tr>
+            <tr><td><center>&#8627;</center></td><td>Manual</td><td></td><td>Opens this document.</td></tr>
+            <tr><td><center>&#8627;</center></td><td>About</td><td></td><td>Shows the current version and Github page of this program.</td></tr>
+        </table>
+        <br />
+        <hr />
+        <h3><a name="UndoRedo">Undo/Redo:</a></h3>
+        The Palette Utility supports undoing and redoing changes via Ctrl+Z and Ctrl+Y.<br />
+        Each individual change of any of the Hue, Saturation and Value values is it's own undo/redo action.
+		<br />
+		<br />
+        <hr />
+        <h3><a name="multiSelect">Selecting palette entries:</a></h3>
+        To select more than one palette entry hold down <i>Ctrl</i> while holding down the <i>left</i> mouse button and dragging the mouse.<br />
+        To deselect one or more palette entries hold down <i>Ctrl</i> while holding down the <i>right</i> mouse button and dragging the mouse.<br />
+        <br />
+        To deselect all selected entries either use the menu <i>Selection -> Clear</i> or use it's shortcut <i>Ctrl + C</i>.
+        <br />
+        <br />
+		<hr />
+        <h3><a name="AbsoluteRelative">Absolute & Relative:</a></h3>
+        <p>
+            Next to the Hue, Saturation and Value selection bar is a button that either says "<i>Absolute</i>" or "<i>Relative</i>".<br />
+            These options are only relevant when you have more than 1 color selected.<br />
+            The color chooser shows the color in the middle of the selection and bases changes of that colors HSV values.
+            <br />
+            <br />
+            <b>Absolute:</b><br />
+            In this mode each selected color will get the same changed HSV value (Hue, Saturation, Value).
+            <br />
+            <br />
+            Example:<br />
+            You have selected 3 colors with the following Hues:<br />
+            <i>40, 45, 60</i>
+            <br />
+            <br />
+            Now you select a Hue value of <i>80</i>. Now each selected color will have it's Hue set to this new value of <i>80</i>.
+            <br />
+            The Hue values of the 3 selected colors will now look like this:<br />
+            <i>80, 80, 80</i>
+            <br />
+            <br />
+            This mode can be helpful if you want all selected colors to have the same Hue/Saturation/value.<br />
+            One scenario where you might want to do this would be when you change all the darkest values in the palette or to quickly change all Hues in a row. Although, you should probably do finer adjustments, and add small differences, afterwards to make your palette more interesting. 
+            <br />
+            <br />
+            <b>Relative:</b><br />
+            In this mode the new HSV value (Hue, Saturation, Value) is added to each selected colors previous HSV value.<br />
+            <br />
+            Example:<br />
+            You have selected 3 colors with the following Saturation:<br />
+            <i>100, 130, 160</i>
+            <br />
+            <br />
+            Now you change the Saturation to be <i>138</i>.<br />
+            The Saturation of the median color in your selection is <i>130</i>. The program now calculates the difference between the median colors Saturation and the new Saturation value. Which would be <i>8</i> in this case.<br />
+            <br />
+            Now each Saturation gets added a value of <i>8</i> to it and will then have the following Saturation values:<br />
+            <i>108, 138, 168</i>
+            <br />
+            <br />
+            The <i>Relative</i> mode might be most useful when changing the colors HSV Value value. 
+        </p>
+        <hr />
+        <h3><a name="question1">My palette changes don't show up in the game.</a></h3>
+        <p>
+            The game only uses the color palette from the background image.
+
+            If you change a tilesets color palette you have to export it (<i>Palette -> Export</i> or <i>Shift+E</i>) and then load the background image (<i>Image -> Open</i> or <i>Ctrl+O</i>) and import your custom palette (<i>Palette -> Import</i> or Shift+I).
+            <br>
+            Alternatively you can also load the background image and then import the tileset's palette via the <i>Palette -> Import from image</i> menu.
+        </p>
+        <h3><a name="question2">I changed a colors Hue/Saturation/Value but it's still white/black.</a></h3>
+        <p>
+            Make sure that your colors Saturation or Value values are not 0 or 255.
+        </p>
+	</div><br />
+	<div class="footer">
+	</div><br />
+</body>
+</html>
